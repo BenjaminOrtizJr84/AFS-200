@@ -12,14 +12,14 @@ print('Step right up, ' + myName + ', I am thinking of a number between 1 and 9.
 
 while guessTotal < 9:
 
-    print    ('What is my number? (*HINT* Enter your guess using the keyboard number keys.)') # There are four spaces in front of print.
+    print    ('What is my number? (*HINT* Enter your guess using the keyboard number keys.)') 
     guess = input()
     guess = int(guess)
 
     guessTotal = guessTotal + 1
 
     if guess < number:
-        print        ('Your guess is less than my number.') # There are eight spaces in front of print.
+        print        ('Your guess is less than my number.')
 
     if guess > number:
         print        ('Your guess is higher than my number.')
