@@ -19,10 +19,10 @@ while guessTotal < 9:
     guessTotal = guessTotal + 1
 
     if guess < number:
-        print        ('Your guess is less than my number.')
+        print('Your guess is less than my number.')
 
     if guess > number:
-        print        ('Your guess is higher than my number.')
+        print('Your guess is higher than my number.')
 
     if guess == number:
         break
