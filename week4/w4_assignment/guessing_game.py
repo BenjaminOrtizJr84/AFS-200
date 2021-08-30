@@ -1,4 +1,4 @@
-# Guessing Number Game
+# Guessing Game
 
 import random
 
@@ -12,7 +12,7 @@ print('Step right up, ' + myName + ', I am thinking of a number between 1 and 9.
 
 while guessTotal < 9:
 
-    print    ('What is my number? (*HINT* Enter your guess using the keyboard number keys.)') 
+    print('What is my number? (*HINT* Enter your guess using the keyboard number keys.)')
     guess = input()
     guess = int(guess)
 
@@ -30,3 +30,7 @@ while guessTotal < 9:
 if guess == number:
     guessTotal = str(guessTotal)
     print('Good job, ' + myName + '! Your total guesses are ' + guessTotal + '!')
+
+if guess != number:
+    number = str(number)
+    print('You Lose!. The number I was thinking of was ' + number)
