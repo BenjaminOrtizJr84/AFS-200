@@ -1,16 +1,32 @@
+# Guessing Number Game
+
 import random
 
-n = random.randint(1, 9)
-guess = int(input('Enter a number from 1 to 9: '))
-while n != "guess":
-    print
-    if guess < n:
-        print("Guess is low")
-        guess = int(input('Enter an number from 1 to 9: '))
-    elif guess > n:
-        print("Guess is high")
-        guess = int(input('Enter an number from 1 to 9: '))
-    else:
-        print('You guessed it! Game Over.')
+guessTotal = 0
+
+print('Hello! Welcome to The Number Guessing Game! What is your name?')
+myName = input()
+
+number = random.randint(1, 9)
+print('Step right up, ' + myName + ', I am thinking of a number between 1 and 9.')
+
+while guessTotal < 9:
+
+    print    ('What is my number? (*HINT* Enter your guess using the keyboard number keys.)') # There are four spaces in front of print.
+    guess = input()
+    guess = int(guess)
+
+    guessTotal = guessTotal + 1
+
+    if guess < number:
+        print        ('Your guess is less than my number.') # There are eight spaces in front of print.
+
+    if guess > number:
+        print        ('Your guess is higher than my number.')
+
+    if guess == number:
         break
-    
+
+if guess == number:
+    guessTotal = str(guessTotal)
+    print('Good job, ' + myName + '! Your total guesses are ' + guessTotal + '!')
